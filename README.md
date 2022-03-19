@@ -1,17 +1,25 @@
-# Lab 31- Django REST Framework & Docker
+# Lab 32- Permissions & Postgresql
 
 - Created a Django Rest/Docker app about animals
 - This was done on .venv through windows powershell
 
 ## Lab Requirements
 
-- Rebuild a custom version of Things API demo project from scratch.
-- Replace things_project and Thing with your own application and model.
-- Your model must have at least as many fields as demo’s model.
-- Your model must have one field that is a foreign key to user.
-- NOTE: You are not required to build any templates for this lab.
+### Django REST Framework
 
-## Docker
+- Make your site a DRF powered API as you did in previous lab.
+- Adjust project’s permissions so that only authenticated user’s have access to API.
+- Add a custom permission so that only author of blog post can update or delete it.
+- Add ability to switch user’s directly from browsable API.
 
-- NOTE Refer to the class demo for built out Dockerfile and docker-compose.yml examples.
-- Update Dockerfile and docker-compose.yml if needed.
+### Docker
+
+- NOTE Refer to demo for built out Dockerfile and docker-compose.yml examples.
+- create Dockerfile based off python:3.8-slim
+- create docker-compose.yml to run Django app as a web service.
+- enter docker-compose up --build to start your site.
+- add postgres 11 as a service
+
+## Testing
+
+- Manual testing of user access and postgres db working
